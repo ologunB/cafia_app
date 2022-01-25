@@ -240,7 +240,6 @@ class _Signup1ViewState extends State<Signup1View> {
           phoneNumber: number,
           timeout: Duration(minutes: 2),
           verificationCompleted: (PhoneAuthCredential _credential) async {
-            code.text = _credential.smsCode!;
             try {
               UserCredential result =
                   await _firebaseAuth.signInWithCredential(_credential);
