@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "7931631666",
+    "project_id": "cafia-97af5",
+    "storage_bucket": "cafia-97af5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7931631666:android:5c57adb361c8132e77842b",
+        "android_client_info": {
+          "package_name": "com.cafia.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7931631666-esf2vsjjoirgo0ur5ov6pvurcdu24hbn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cafia.app",
+            "certificate_hash": "c6e94cdc70d739c33571dad023b3455635423255"
+          }
+        },
+        {
+          "client_id": "7931631666-nsbph43ovhum2f61lqjdclgu4oj2rnhg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBngNDDaPSiSwkZ4wbI7CMYALiuYVoIxQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7931631666-nsbph43ovhum2f61lqjdclgu4oj2rnhg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
