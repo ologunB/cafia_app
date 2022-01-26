@@ -18,6 +18,8 @@ import 'package:mms_app/app/utils/router.dart';
 import 'package:mms_app/app/utils/utils.dart';
 
 class Signup1View extends StatefulWidget {
+  final bool isLogin;
+  Signup1View({this.isLogin= false});
   @override
   _Signup1ViewState createState() => _Signup1ViewState();
 }
@@ -28,6 +30,11 @@ class _Signup1ViewState extends State<Signup1View> {
   TextEditingController phone = TextEditingController();
 
   bool accept = false;
+  @override
+  void initState() {
+    accept = widget.isLogin;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +149,7 @@ class _Signup1ViewState extends State<Signup1View> {
             ],
           ),
           SizedBox(height: 20.h),
-          Row(
+        if(!widget.isLogin)  Row(
             children: [
               InkWell(
                 onTap: () => setState(() => accept = !accept),

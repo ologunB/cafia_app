@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mms_app/app/components/buttons.dart';
 import 'package:mms_app/app/components/custom_scaffold.dart';
 import 'package:mms_app/app/utils/local_storage.dart';
@@ -48,7 +50,7 @@ class _StartAuthViewState extends State<StartAuthView> {
           Padding(
             padding: EdgeInsets.all(20.h),
             child: buttonWithBorder(
-              'Continue',
+              'Register',
               buttonColor: AppColors.orange,
               fontSize: 15.sp,
               height: 56.h,
@@ -59,6 +61,35 @@ class _StartAuthViewState extends State<StartAuthView> {
           ),
           SizedBox(height: 40.h),
         ],
+      ),
+      bottomNavigationBar:  Container(
+        color: Colors.transparent,
+        padding:   EdgeInsets.all(20.h),
+        child: SafeArea(
+          child: RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: 'Have an account? ',
+              style: GoogleFonts.rubik(
+                color: AppColors.textBlack,
+                fontSize: 15.sp,
+              ),
+              children: [
+                TextSpan(
+                    text: 'Login',
+                    style: GoogleFonts.rubik(
+                      color: AppColors.green,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    recognizer: TapGestureRecognizer()..onTap = () {
+                      push(context, Signup1View(isLogin:true));
+                    }),
+
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

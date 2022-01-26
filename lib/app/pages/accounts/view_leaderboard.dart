@@ -133,7 +133,7 @@ class _ViewLeaderboardState extends State<ViewLeaderboard> {
                 ),
                 child: ListView.builder(
                   shrinkWrap: true,
-                  itemCount: 10,
+                  itemCount: 7,
                   padding: EdgeInsets.zero,
                   physics: ClampingScrollPhysics(),
                   itemBuilder: (context, index) {
@@ -148,7 +148,7 @@ class _ViewLeaderboardState extends State<ViewLeaderboard> {
                       child: Row(
                         children: [
                           regularText(
-                            (index + 1).toString(),
+                            (index + 4).toString(),
                             fontSize: 17.sp,
                             color: AppColors.black,
                             fontWeight: FontWeight.w600,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mms_app/app/components/buttons.dart';
 import 'package:mms_app/app/components/chip_item.dart';
 import 'package:mms_app/app/components/custom_dialog.dart';
+import 'package:mms_app/app/components/custom_scaffold.dart';
 import 'package:mms_app/app/components/custom_textfield.dart';
 import 'package:mms_app/app/components/custom_textfield2.dart';
 import 'package:mms_app/app/components/snackbar.dart';
@@ -68,9 +69,10 @@ class _CreateRequestState extends State<CreateRequest> {
 
           return shouldClose;
         },
-        child: Scaffold(
-            backgroundColor: AppColors.lemon,
-            bottomNavigationBar: Container(
+        child: CustomScaffold(
+          removeImage: true,
+             removeBack: true,
+             bottomNavigationBar: Container(
               color: AppColors.white,
               padding: EdgeInsets.all(20.h),
               child: SafeArea(
@@ -119,7 +121,7 @@ class _CreateRequestState extends State<CreateRequest> {
                 ),
               ),
             ),
-            body: SafeArea(
+            child: SafeArea(
               child: Column(
                 children: [
                   Container(
